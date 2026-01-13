@@ -1,0 +1,48 @@
+{
+  "name": "community-cordova-plugin-security-check",
+  "version": "1.0.1",
+  "description": "Community Cordova Security Check Plugin",
+  "main": "./types/index.d.ts",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "community-cordova-plugin-security-check",
+    "platforms": [
+      "android",
+      "ios",
+      "browser"
+    ]
+  },
+  "readme": "README.md",
+  "repository": "EYALIN/community-cordova-plugin-security-check",
+  "homepage": "https://github.com/EYALIN/community-cordova-plugin-security-check",
+  "funding": "https://github.com/sponsors/EYALIN",
+  "bugs": "https://github.com/EYALIN/community-cordova-plugin-security-check/issues",
+  "keywords": [
+    "cordova",
+    "security",
+    "check",
+    "patch",
+    "level",
+    "rooted",
+    "jailbreak",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint ."
+  },
+  "author": "EYALIN",
+  "license": "MIT",
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "devDependencies": {
+    "@cordova/eslint-config": "^3.0.0"
+  }
+}
