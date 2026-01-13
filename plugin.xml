@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed under MIT License
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+-->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="community-cordova-plugin-security-check"
+      version="1.0.1">
+    <name>SecurityCheck</name>
+    <description>Community Cordova Security Check Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,security,check,patch,level,rooted,jailbreak</keywords>
+    <repo>https://github.com/EYALIN/community-cordova-plugin-security-check</repo>
+    <issue>https://github.com/EYALIN/community-cordova-plugin-security-check/issues</issue>
+
+    <js-module src="www/security.js" name="security">
+        <clobbers target="SecurityPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SecurityCheck">
+                <param name="android-package" value="com.community.cordova.security.SecurityCheck"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/SecurityCheck.java" target-dir="src/com/community/cordova/security" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SecurityCheck">
+                <param name="ios-package" value="CDVSecurityCheck" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVSecurityCheck.h" />
+        <source-file src="src/ios/CDVSecurityCheck.m" />
+    </platform>
+
+    <!-- browser -->
+    <platform name="browser">
+        <js-module src="src/browser/SecurityCheckProxy.js" name="SecurityCheck">
+            <runs />
+        </js-module>
+    </platform>
+</plugin>
