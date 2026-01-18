@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef2572eb-18e1-40c8-9ca5-4bfc0789f5a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/android/SecurityCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/browser/SecurityCheckProxy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ios/CDVSecurityCheck.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ios/CDVSecurityCheck.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/security.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="ef2572eb-18e1-40c8-9ca5-4bfc0789f5a6" name="Changes" comment="initial plugin">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +22,12 @@
     &quot;assignee&quot;: &quot;EYALIN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/EYALIN/community-cordova-plugin-security-check.git",
-    "accountId": "554cb47e-af38-4ebf-8263-4816fa246779"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EYALIN/community-cordova-plugin-security-check.git&quot;,
+    &quot;accountId&quot;: &quot;554cb47e-af38-4ebf-8263-4816fa246779&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -48,7 +41,9 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Volumes/Development/Git/forked/community-cordova-plugin-security-check",
     "node.js.detected.package.eslint": "true",
@@ -68,7 +63,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.29188.1" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.242" />
       </set>
     </attachedChunks>
   </component>
@@ -82,10 +77,24 @@
       <workItem from="1768113873496" duration="904000" />
       <workItem from="1768114877341" duration="502000" />
       <workItem from="1768115883403" duration="667000" />
+      <workItem from="1768313320371" duration="644000" />
     </task>
+    <task id="LOCAL-00001" summary="initial plugin">
+      <option name="closed" value="true" />
+      <created>1768313341958</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1768313341958</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial plugin" />
   </component>
 </project>

@@ -15,7 +15,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
       id="community-cordova-plugin-security-check"
-      version="1.0.1">
+      version="1.0.2">
     <name>SecurityCheck</name>
     <description>Community Cordova Security Check Plugin</description>
     <license>MIT</license>

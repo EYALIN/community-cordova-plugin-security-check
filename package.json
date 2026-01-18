@@ -1,6 +1,6 @@
 {
   "name": "community-cordova-plugin-security-check",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Community Cordova Security Check Plugin",
   "main": "./types/index.d.ts",
   "types": "./types/index.d.ts",
