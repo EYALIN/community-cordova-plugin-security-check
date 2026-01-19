@@ -174,11 +174,6 @@
         return YES;
     }
 
-    // Check if system() call works (should fail on non-jailbroken devices)
-    if (system(NULL) != 0) {
-        return YES;
-    }
-
     return NO;
 }
 
