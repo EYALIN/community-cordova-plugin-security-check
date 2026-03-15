@@ -71,25 +71,27 @@ public class SecurityCheck extends CordovaPlugin {
     /**
      * Get comprehensive security information
      */
-    private void getSecurityInfo(CallbackContext callbackContext) {
-        try {
-            JSONObject result = new JSONObject();
+    private void getSecurityInfo(final CallbackContext callbackContext) {
+        cordova.getThreadPool().execute(() -> {
+            try {
+                JSONObject result = new JSONObject();
 
-            result.put("securityPatchLevel", getSecurityPatchLevelString());
-            result.put("isDeviceCompromised", isRooted());
-            result.put("isDeveloperOptionsEnabled", isDeveloperMode());
-            result.put("isUsbDebuggingEnabled", isUsbDebugging());
-            result.put("isScreenLockEnabled", hasScreenLock());
-            result.put("encryptionStatus", getDeviceEncryptionStatus());
-            result.put("isPlayServicesAvailable", checkPlayServices());
-            result.put("dangerousPermissions", getDangerousPermissionsList());
-            result.put("osVersion", Build.VERSION.RELEASE);
+                result.put("securityPatchLevel", getSecurityPatchLevelString());
+                result.put("isDeviceCompromised", isRooted());
+                result.put("isDeveloperOptionsEnabled", isDeveloperMode());
+                result.put("isUsbDebuggingEnabled", isUsbDebugging());
+                result.put("isScreenLockEnabled", hasScreenLock());
+                result.put("encryptionStatus", getDeviceEncryptionStatus());
+                result.put("isPlayServicesAvailable", checkPlayServices());
+                result.put("dangerousPermissions", getDangerousPermissionsList());
+                result.put("osVersion", Build.VERSION.RELEASE);
 
-            callbackContext.success(result);
-        } catch (Exception e) {
-            Log.e(LOG_TAG, "Error getting security info", e);
-            callbackContext.error("Error getting security info: " + e.getMessage());
-        }
+                callbackContext.success(result);
+            } catch (Exception e) {
+                Log.e(LOG_TAG, "Error getting security info", e);
+                callbackContext.error("Error getting security info: " + e.getMessage());
+            }
+        });
     }
 
     /**
@@ -108,14 +110,16 @@ public class SecurityCheck extends CordovaPlugin {
     /**
      * Check if device is rooted
      */
-    private void isDeviceCompromised(CallbackContext callbackContext) {
-        try {
-            boolean isRooted = isRooted();
-            callbackContext.success(isRooted ? 1 : 0);
-        } catch (Exception e) {
-            Log.e(LOG_TAG, "Error checking root status", e);
-            callbackContext.error("Error: " + e.getMessage());
-        }
+    private void isDeviceCompromised(final CallbackContext callbackContext) {
+        cordova.getThreadPool().execute(() -> {
+            try {
+                boolean isRooted = isRooted();
+                callbackContext.success(isRooted ? 1 : 0);
+            } catch (Exception e) {
+                Log.e(LOG_TAG, "Error checking root status", e);
+                callbackContext.error("Error: " + e.getMessage());
+            }
+        });
     }
 
     /**
@@ -186,14 +190,16 @@ public class SecurityCheck extends CordovaPlugin {
     /**
      * Get list of dangerous permissions granted
      */
-    private void getDangerousPermissions(CallbackContext callbackContext) {
-        try {
-            JSONArray permissions = getDangerousPermissionsList();
-            callbackContext.success(permissions);
-        } catch (Exception e) {
-            Log.e(LOG_TAG, "Error getting dangerous permissions", e);
-            callbackContext.error("Error: " + e.getMessage());
-        }
+    private void getDangerousPermissions(final CallbackContext callbackContext) {
+        cordova.getThreadPool().execute(() -> {
+            try {
+                JSONArray permissions = getDangerousPermissionsList();
+                callbackContext.success(permissions);
+            } catch (Exception e) {
+                Log.e(LOG_TAG, "Error getting dangerous permissions", e);
+                callbackContext.error("Error: " + e.getMessage());
+            }
+        });
     }
 
     // Helper methods
